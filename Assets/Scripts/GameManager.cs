@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 	[SerializeField] private GameObject player;
@@ -11,9 +12,6 @@ public class GameManager : MonoBehaviour {
 	//
 	private bool gameOver = false;
 	private bool gameStart = false;
-	private bool hasKey = false;
-	private bool hasFood = false;
-	private bool hasMed = false;
 
 	//
 	public GameObject Player {
@@ -28,18 +26,6 @@ public class GameManager : MonoBehaviour {
 		get { return gameStart; }
 	}
 
-	public bool HasKey {
-		get { return hasKey; }
-	}
-
-	public bool HasFood {
-		get { return hasFood; }
-	}
-
-	public bool HasMed {
-		get { return hasMed; }
-	}
-
 	//
 	void Awake () {
 		if (instance == null) {
@@ -47,8 +33,6 @@ public class GameManager : MonoBehaviour {
 		} else if (instance != this) {
 			Destroy (gameObject);
 		}
-
-		DontDestroyOnLoad (gameObject);
 
 		Assert.IsNotNull (player);
 	}
@@ -62,15 +46,11 @@ public class GameManager : MonoBehaviour {
 		gameStart = true;
 	}
 
-	public void PlayerHasKey () {
-		hasKey = true;
+	public void Restart () {
+		SceneManager.LoadScene ("Main");
 	}
 
-	public void PlayerHasFood () {
-		hasFood = true;
-	}
-
-	public void PlayerHasMed () {
-		hasMed = true;
+	public void Exit () {
+		Application.Quit ();
 	}
 }
