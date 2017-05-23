@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Raycast : MonoBehaviour {
+	[SerializeField] private GameObject ball;
+	[SerializeField] private Transform ballResetPosition;
+
 	private float distance = 10f;
 	private RaycastHit hit;
 
@@ -24,6 +27,7 @@ public class Raycast : MonoBehaviour {
 	}
 
 	void ShootBall () {
+		Instantiate (ball, transform.position, transform.rotation, ballResetPosition);
 		Debug.Log ("shoot");
 	}
 }
