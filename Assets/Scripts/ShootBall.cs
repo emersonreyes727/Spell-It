@@ -14,8 +14,6 @@ public class ShootBall : MonoBehaviour {
 
 	void ShootTheBall () {
 		Instantiate (ball, transform.position, transform.rotation, ballResetPosition);
-		Debug.Log ("Shoot the ball");
+		Debug.Log ("Shoot the ball");	
 	}
-
-
 }
