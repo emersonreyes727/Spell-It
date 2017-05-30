@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
 
@@ -9,10 +10,16 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager instance = null;
 
+	// delete me
+	[SerializeField] private Text ringA;
+	[SerializeField] private Text ringX;
+
 	//
 	private bool gameOver = false;
 	private bool gameStart = false;
-	private bool isShooting = false;
+
+	private int hitX;
+	private bool hitA = false;
 
 	//
 	public GameObject Player {
@@ -27,8 +34,12 @@ public class GameManager : MonoBehaviour {
 		get { return gameStart; }
 	}
 
-	public bool IsShooting {
-		get { return isShooting; }
+	public int HitX {
+		get { return hitX; }
+	}
+
+	public bool HitA {
+		get { return hitA; }
 	}
 
 	//
@@ -42,6 +53,13 @@ public class GameManager : MonoBehaviour {
 		Assert.IsNotNull (player);
 	}
 
+	// 
+	void Update () {
+		// delete me
+		ringA.text = "Ring A: " + hitA;
+		ringX.text = "Ring X: " + hitX;
+	}
+
 	//
 	public void GameIsOver () {
 		gameOver = true;
@@ -51,8 +69,12 @@ public class GameManager : MonoBehaviour {
 		gameStart = true;
 	}
 
-	public void ShootingBall () {
-		isShooting = true;
+	public void XisHit () {
+		hitX += 1;
+	}
+
+	public void AisHit () {
+		hitA = true;
 	}
 
 	public void Restart () {

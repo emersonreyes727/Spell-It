@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ball : MonoBehaviour {
+public class Ball : MonoBehaviour {
 	[SerializeField] private float force;
 	private Rigidbody rb;
 	private bool addOnce = true;
