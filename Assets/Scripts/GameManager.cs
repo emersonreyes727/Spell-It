@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
 	//
 	private bool gameOver = false;
 	private bool gameStart = false;
+	private bool isShooting = false;
 
 	//
 	public GameObject Player {
@@ -24,6 +25,10 @@ public class GameManager : MonoBehaviour {
 
 	public bool GameStart {
 		get { return gameStart; }
+	}
+
+	public bool IsShooting {
+		get { return isShooting; }
 	}
 
 	//
@@ -44,6 +49,10 @@ public class GameManager : MonoBehaviour {
 
 	public void GameHasStarted () {
 		gameStart = true;
+	}
+
+	public void ShootingBall () {
+		isShooting = true;
 	}
 
 	public void Restart () {
