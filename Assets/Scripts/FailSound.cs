@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class FailSound : MonoBehaviour {
 	[SerializeField] private AudioClip soundFxFail;
@@ -8,7 +9,12 @@ public class FailSound : MonoBehaviour {
 	private GvrAudioSource audio;
 	private bool playAudioOnce = false;
 
-	// Use this for initialization
+	//
+	void Awake () {
+		Assert.IsNotNull (soundFxFail);
+	}
+
+	// 
 	void Start () {
 		audio = GetComponent<GvrAudioSource> ();	
 	}

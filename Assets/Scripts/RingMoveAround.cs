@@ -4,11 +4,6 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 public class RingMoveAround : MonoBehaviour {
-	[SerializeField] private float topLeft; 
-	[SerializeField] private float topRight; 
-	[SerializeField] private float bottomRight; 
-	[SerializeField] private float bottomLeft; 
-
 	[SerializeField] private GameObject ringG2;
 	[SerializeField] private GameObject ringO;
 	[SerializeField] private GameObject ringR2;
@@ -26,9 +21,32 @@ public class RingMoveAround : MonoBehaviour {
 	[SerializeField] private GameObject ringZv;
 	[SerializeField] private GameObject ringZc;
 
+	private float topLeft = 4.5f; 
+	private float topRight = 32f; 
+	private float bottomRight = 3.5f; 
+	private float bottomLeft = 25f; 
 
 	private float speed = 0.5f;
 
+	//
+	void Awake () {
+		Assert.IsNotNull (ringG2);
+		Assert.IsNotNull (ringO);
+		Assert.IsNotNull (ringR2);
+		Assert.IsNotNull (ringI2);
+		Assert.IsNotNull (ringL);
+		Assert.IsNotNull (ringL2);
+		Assert.IsNotNull (ringA2);
+		Assert.IsNotNull (ringZe);
+		Assert.IsNotNull (ringZu);
+		Assert.IsNotNull (ringZb);
+		Assert.IsNotNull (ringZs);
+		Assert.IsNotNull (ringZw);
+		Assert.IsNotNull (ringZp);
+		Assert.IsNotNull (ringZq);
+		Assert.IsNotNull (ringZv);
+		Assert.IsNotNull (ringZc);
+	}
 	//
 	void Update () {
 		// ringG2 move

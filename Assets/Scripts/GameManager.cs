@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
 
@@ -10,27 +9,29 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager instance = null;
 
-	// delete me
-	[SerializeField] private Text ringA;
-	[SerializeField] private Text ringT;
-	[SerializeField] private Text ringG;
-
-	[SerializeField] private Text ringX;
-	[SerializeField] private Text ringY;
-	[SerializeField] private Text ringZ;
-
 	//
 	private bool gameOver = false;
 	private bool gameStart = false;
 
-	//
 	private int hitX;
 	private int hitY;
 	private int hitZ;
 
+	private bool hitC = false;
 	private bool hitA = false;
 	private bool hitT = false;
+	private bool hitT2 = false;
+	private bool hitI = false;
 	private bool hitG = false;
+	private bool hitE = false;
+	private bool hitR = false;
+	private bool hitG2 = false;
+	private bool hitO = false;
+	private bool hitR2 = false;
+	private bool hitI2 = false;
+	private bool hitL = false;
+	private bool hitL2 = false;
+	private bool hitA2 = false;
 
 	//
 	public GameObject Player {
@@ -44,8 +45,7 @@ public class GameManager : MonoBehaviour {
 	public bool GameStart {
 		get { return gameStart; }
 	}
-
-	//
+		
 	public int HitX {
 		get { return hitX; }
 	}
@@ -58,6 +58,9 @@ public class GameManager : MonoBehaviour {
 		get { return hitZ; }
 	}
 
+	public bool HitC {
+		get { return hitC; }
+	}
 
 	public bool HitA {
 		get { return hitA; }
@@ -67,8 +70,52 @@ public class GameManager : MonoBehaviour {
 		get { return hitT; }
 	}
 
+	public bool HitT2 {
+		get { return hitT2; }
+	}
+
+	public bool HitI {
+		get { return hitI; }
+	}
+
 	public bool HitG {
 		get { return hitG; }
+	}
+
+	public bool HitE {
+		get { return hitE; }
+	}
+
+	public bool HitR {
+		get { return hitR; }
+	}
+
+	public bool HitG2 {
+		get { return hitG2; }
+	}
+
+	public bool HitO {
+		get { return hitO; }
+	}
+
+	public bool HitR2 {
+		get { return hitR2; }
+	}
+
+	public bool HitI2 {
+		get { return hitI2; }
+	}
+
+	public bool HitL {
+		get { return hitL; }
+	}
+
+	public bool HitL2 {
+		get { return hitL2; }
+	}
+
+	public bool HitA2 {
+		get { return hitA2; }
 	}
 
 	//
@@ -81,19 +128,7 @@ public class GameManager : MonoBehaviour {
 
 		Assert.IsNotNull (player);
 	}
-
-	// 
-	void Update () {
-		// delete me
-		ringX.text = "Ring X: " + hitX;
-		ringY.text = "Ring Y: " + hitY;
-		ringZ.text = "Ring ZZ: " + hitZ;
-
-		ringA.text = "Ring A: " + hitA;
-		ringT.text = "Ring T: " + hitT;
-		ringG.text = "Ring G: " + hitG;
-	}
-
+		
 	//
 	public void GameIsOver () {
 		gameOver = true;
@@ -116,6 +151,10 @@ public class GameManager : MonoBehaviour {
 		hitZ += 1;
 	}
 
+	public void CisHit () {
+		hitC = true;
+	}
+
 	public void AisHit () {
 		hitA = true;
 	}
@@ -124,8 +163,52 @@ public class GameManager : MonoBehaviour {
 		hitT = true;
 	}
 
+	public void T2isHit () {
+		hitT2 = true;
+	}
+
+	public void IisHit () {
+		hitI = true;
+	}
+
 	public void GisHit () {
 		hitG = true;
+	}
+
+	public void EisHit () {
+		hitE = true;
+	}
+
+	public void RisHit () {
+		hitR = true;
+	}
+
+	public void G2isHit () {
+		hitG2 = true;
+	}
+
+	public void OisHit () {
+		hitO = true;
+	}
+
+	public void R2isHit () {
+		hitR2 = true;
+	}
+
+	public void I2isHit () {
+		hitI2 = true;
+	}
+
+	public void LisHit () {
+		hitL = true;
+	}
+
+	public void L2isHit () {
+		hitL2 = true;
+	}
+
+	public void A2isHit () {
+		hitA2 = true;
 	}
 
 	//

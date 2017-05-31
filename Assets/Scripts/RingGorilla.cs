@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class RingGorilla : MonoBehaviour {
 	[SerializeField] private Canvas letterG;
@@ -18,7 +19,7 @@ public class RingGorilla : MonoBehaviour {
 
 	//
 	void Update () {
-		if (GameManager.instance.HitG && !playerScored) {
+		if (GameManager.instance.HitG2 && !playerScored) {
 			letterG.enabled = false;
 			colliderG.SetActive (false);
 

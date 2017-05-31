@@ -5,6 +5,8 @@ using UnityEngine;
 public class Ball : MonoBehaviour {
 	private float force = 0.10f;
 	private Rigidbody rb;
+
+	// adds for to the ball once
 	private bool addOnce = true;
 
 	// Use this for initialization

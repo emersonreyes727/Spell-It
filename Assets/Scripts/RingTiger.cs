@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class RingTiger : MonoBehaviour {
 	[SerializeField] private Canvas letterT;
@@ -18,7 +19,7 @@ public class RingTiger : MonoBehaviour {
 
 	//
 	void Update () {
-		if (GameManager.instance.HitT && !playerScored) {
+		if (GameManager.instance.HitT2 && !playerScored) {
 			letterT.enabled = false;
 			colliderT.SetActive (false);
 

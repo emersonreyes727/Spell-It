@@ -7,11 +7,6 @@ public class RingMoveLeft : MonoBehaviour {
 	private float resetPosition = 6f;
 	private float speed = 0.25f;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-
 	// Update is called once per frame
 	void Update () {
 		transform.Translate (Vector3.left * (speed * Time.deltaTime));

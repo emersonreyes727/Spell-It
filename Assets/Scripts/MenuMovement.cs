@@ -1,10 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class MenuMovement : MonoBehaviour {
 	[SerializeField] private GameObject mainCamera;
 
+	//
+	void Awake () {
+		Assert.IsNotNull (mainCamera);
+	}
+
+	//
 	void Update () {
 		this.transform.position = mainCamera.transform.position;
 		float angleX = this.transform.eulerAngles.x;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Assertions;
 
 public class ShootBall : MonoBehaviour {
 	[SerializeField] private GameObject ball;
@@ -16,6 +17,13 @@ public class ShootBall : MonoBehaviour {
 
 	// how many times the player shoot the ball
 	private int playerShoot;
+
+	//
+	void Awake () {
+		Assert.IsNotNull (ball);
+		Assert.IsNotNull (ballResetPosition);
+		Assert.IsNotNull (soundFx);
+	}
 
 	// 
 	void Start () {
