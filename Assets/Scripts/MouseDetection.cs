@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseDetection : MonoBehaviour {
-
-	//
-	void Start () {
-
-	}
+	// disable the "shootball" script when it enter a button or waypoint so it won't 
+	// shoot the ball when you click the button
 
 	public void OnMouseEnter () {
 		GameObject.Find("Main Camera").GetComponent<ShootBall>().enabled = false;

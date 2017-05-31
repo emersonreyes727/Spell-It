@@ -5,13 +5,13 @@ using UnityEngine.Assertions;
 
 public class RingMoveAround : MonoBehaviour {
 	[SerializeField] private float topLeft; 
-	[SerializeField] private float topRight;
+	[SerializeField] private float topRight; 
 	[SerializeField] private float bottomRight; 
-	[SerializeField] private float bottomLeft;
+	[SerializeField] private float bottomLeft; 
 	[SerializeField] private GameObject ringB;
 	[SerializeField] private GameObject ringX2;
 
-	private float speed = 2f;
+	private float speed = 1f;
 
 	//
 	void Update () {

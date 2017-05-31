@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RingMoveRight : MonoBehaviour {
-	private float startPosition = 4f;
-	private float resetPosition = 17f;
-	private float speed = 1f;
+	private float startPosition = 7f;
+	private float resetPosition = 13f;
+	private float speed = 0.5f;
 	
 	// Update is called once per frame
 	void Update () {

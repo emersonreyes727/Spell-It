@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RingMoveLeft : MonoBehaviour {
-	private float startPosition = 17f;
-	private float resetPosition = 4f;
-	private float speed = 1f;
+	private float startPosition = 13f;
+	private float resetPosition = 7f;
+	private float speed = 0.5f;
 
 	// Use this for initialization
 	void Start () {

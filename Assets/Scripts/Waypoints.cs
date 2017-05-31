@@ -16,6 +16,6 @@ public class Waypoints : MonoBehaviour {
 	}
 
 	public void MoveHere () {
-		camera.position = new Vector3 (transform.position.x, transform.position.y + 1f, transform.position.z);
+		camera.position = new Vector3 (transform.position.x, transform.position.y - 0.5f, transform.position.z);
 	}
 }
