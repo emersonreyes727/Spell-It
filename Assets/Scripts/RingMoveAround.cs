@@ -15,9 +15,9 @@ public class RingMoveAround : MonoBehaviour {
 	[SerializeField] private GameObject ringZc;
 
 	private float topLeft = 4.5f; 
-	private float topRight = 32f; 
+	private float topRight = 31f; 
 	private float bottomRight = 3.5f; 
-	private float bottomLeft = 25f; 
+	private float bottomLeft = 28f; 
 
 	private float speed = 0.5f;
 

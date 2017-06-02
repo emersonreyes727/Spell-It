@@ -5,8 +5,10 @@ using UnityEngine;
 public class Ball : MonoBehaviour {
 	private float force = 0.10f;
 	private Rigidbody rb;
+	private float timer = 5f;
+	private bool timerOn = false;
 
-	// adds for to the ball once
+	// adds force to the ball once
 	private bool addOnce = true;
 
 	// Use this for initialization
@@ -18,7 +20,16 @@ public class Ball : MonoBehaviour {
 	void FixedUpdate () {
 		if (addOnce) {
 			rb.AddForce (transform.forward * force, ForceMode.Impulse);
+			timerOn = true;
 			addOnce = false;
+		}
+
+		if (timerOn) {
+			timer -= Time.deltaTime;
+
+			if (timer <= 0) {
+				Destroy (gameObject);	
+			}
 		}
 	}
 }
