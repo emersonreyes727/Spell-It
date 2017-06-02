@@ -13,18 +13,24 @@ public class GameManager : MonoBehaviour {
 	private bool gameOver = false;
 	private bool gameStart = false;
 
+	//
 	private int hitX;
 	private int hitY;
 	private int hitZ;
 
+	//
 	private bool hitC = false;
 	private bool hitA = false;
 	private bool hitT = false;
+
+	//
 	private bool hitT2 = false;
 	private bool hitI = false;
 	private bool hitG = false;
 	private bool hitE = false;
 	private bool hitR = false;
+
+	//
 	private bool hitG2 = false;
 	private bool hitO = false;
 	private bool hitR2 = false;
@@ -45,7 +51,8 @@ public class GameManager : MonoBehaviour {
 	public bool GameStart {
 		get { return gameStart; }
 	}
-		
+
+	//
 	public int HitX {
 		get { return hitX; }
 	}
@@ -58,6 +65,7 @@ public class GameManager : MonoBehaviour {
 		get { return hitZ; }
 	}
 
+	//
 	public bool HitC {
 		get { return hitC; }
 	}
@@ -70,6 +78,7 @@ public class GameManager : MonoBehaviour {
 		get { return hitT; }
 	}
 
+	//
 	public bool HitT2 {
 		get { return hitT2; }
 	}
@@ -90,6 +99,7 @@ public class GameManager : MonoBehaviour {
 		get { return hitR; }
 	}
 
+	//
 	public bool HitG2 {
 		get { return hitG2; }
 	}
@@ -151,6 +161,7 @@ public class GameManager : MonoBehaviour {
 		hitZ += 1;
 	}
 
+	//
 	public void CisHit () {
 		hitC = true;
 	}
@@ -163,6 +174,7 @@ public class GameManager : MonoBehaviour {
 		hitT = true;
 	}
 
+	//
 	public void T2isHit () {
 		hitT2 = true;
 	}
@@ -183,6 +195,7 @@ public class GameManager : MonoBehaviour {
 		hitR = true;
 	}
 
+	//
 	public void G2isHit () {
 		hitG2 = true;
 	}

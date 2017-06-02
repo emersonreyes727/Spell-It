@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class FailSound : MonoBehaviour {
+public class SoundFail : MonoBehaviour {
 	[SerializeField] private AudioClip soundFxFail;
 
 	private GvrAudioSource audio;
-	private bool playAudioOnce = false;
 
 	//
 	void Awake () {
@@ -22,12 +21,7 @@ public class FailSound : MonoBehaviour {
 	//
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Ball") {
-			playAudioOnce = true;
-		}
-
-		if (playAudioOnce) {
 			audio.PlayOneShot (soundFxFail);
-			playAudioOnce = false;
 		}
 	}
 }

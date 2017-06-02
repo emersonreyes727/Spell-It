@@ -39,10 +39,6 @@ public class WordDisplay : MonoBehaviour {
 		Assert.IsNotNull (letterL2);
 		Assert.IsNotNull (letterA2);
 	}
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -118,18 +114,22 @@ public class WordDisplay : MonoBehaviour {
 			letterI2.text = "I";
 		}
 
-		if (!GameManager.instance.HitL) {
+		//
+		if (!GameManager.instance.HitL && !GameManager.instance.HitL2) {
 			letterL.text = "X";
-		} else {
-			letterL.text = "L";
-		}
-
-		if (!GameManager.instance.HitL2) {
 			letterL2.text = "X";
-		} else {
+		} else if (GameManager.instance.HitL && !GameManager.instance.HitL2) {
+			letterL.text = "L";
+			letterL2.text = "X";
+		} else if (!GameManager.instance.HitL && GameManager.instance.HitL2) {
+			letterL.text = "L";
+			letterL2.text = "X";
+		} else if (GameManager.instance.HitL && GameManager.instance.HitL2) {
+			letterL.text = "L";
 			letterL2.text = "L";
 		}
 
+		//
 		if (!GameManager.instance.HitA2) {
 			letterA2.text = "X";
 		} else {
