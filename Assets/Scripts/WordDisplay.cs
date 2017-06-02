@@ -8,36 +8,34 @@ public class WordDisplay : MonoBehaviour {
 	[SerializeField] private Text letterC;
 	[SerializeField] private Text letterA;
 	[SerializeField] private Text letterT;
+
 	[SerializeField] private Text letterT2;
 	[SerializeField] private Text letterI;
 	[SerializeField] private Text letterG;
 	[SerializeField] private Text letterE;
 	[SerializeField] private Text letterR;
-	[SerializeField] private Text letterG2;
-	[SerializeField] private Text letterO;
-	[SerializeField] private Text letterR2;
+
+	[SerializeField] private Text letterB;
 	[SerializeField] private Text letterI2;
-	[SerializeField] private Text letterL;
-	[SerializeField] private Text letterL2;
-	[SerializeField] private Text letterA2;
+	[SerializeField] private Text letterR2;
+	[SerializeField] private Text letterD;
 
 	//
 	void Awake () {
 		Assert.IsNotNull (letterC);
 		Assert.IsNotNull (letterA);
 		Assert.IsNotNull (letterT);
+
 		Assert.IsNotNull (letterT2);
 		Assert.IsNotNull (letterI);
 		Assert.IsNotNull (letterG);
 		Assert.IsNotNull (letterE);
 		Assert.IsNotNull (letterR);
-		Assert.IsNotNull (letterG2);
-		Assert.IsNotNull (letterO);
-		Assert.IsNotNull (letterR2);
+
+		Assert.IsNotNull (letterB);
 		Assert.IsNotNull (letterI2);
-		Assert.IsNotNull (letterL);
-		Assert.IsNotNull (letterL2);
-		Assert.IsNotNull (letterA2);
+		Assert.IsNotNull (letterR2);
+		Assert.IsNotNull (letterD);
 	}
 	
 	// Update is called once per frame
@@ -60,6 +58,7 @@ public class WordDisplay : MonoBehaviour {
 			letterT.text = "T";
 		}
 
+		//
 		if (!GameManager.instance.HitT2) {
 			letterT2.text = "X";
 		} else {
@@ -90,22 +89,11 @@ public class WordDisplay : MonoBehaviour {
 			letterR.text = "R";
 		}
 
-		if (!GameManager.instance.HitG2) {
-			letterG2.text = "X";
+		//
+		if (!GameManager.instance.HitB) {
+			letterB.text = "X";
 		} else {
-			letterG2.text = "G";
-		}
-
-		if (!GameManager.instance.HitO) {
-			letterO.text = "X";
-		} else {
-			letterO.text = "O";
-		}
-
-		if (!GameManager.instance.HitR2) {
-			letterR2.text = "X";
-		} else {
-			letterR2.text = "R";
+			letterB.text = "B";
 		}
 
 		if (!GameManager.instance.HitI2) {
@@ -114,26 +102,16 @@ public class WordDisplay : MonoBehaviour {
 			letterI2.text = "I";
 		}
 
-		//
-		if (!GameManager.instance.HitL && !GameManager.instance.HitL2) {
-			letterL.text = "X";
-			letterL2.text = "X";
-		} else if (GameManager.instance.HitL && !GameManager.instance.HitL2) {
-			letterL.text = "L";
-			letterL2.text = "X";
-		} else if (!GameManager.instance.HitL && GameManager.instance.HitL2) {
-			letterL.text = "L";
-			letterL2.text = "X";
-		} else if (GameManager.instance.HitL && GameManager.instance.HitL2) {
-			letterL.text = "L";
-			letterL2.text = "L";
+		if (!GameManager.instance.HitR2) {
+			letterR2.text = "X";
+		} else {
+			letterR2.text = "R";
 		}
 
-		//
-		if (!GameManager.instance.HitA2) {
-			letterA2.text = "X";
+		if (!GameManager.instance.HitD) {
+			letterD.text = "X";
 		} else {
-			letterA2.text = "A";
+			letterD.text = "D";
 		}
 	}
 }

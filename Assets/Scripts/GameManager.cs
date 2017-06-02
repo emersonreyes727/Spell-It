@@ -31,13 +31,10 @@ public class GameManager : MonoBehaviour {
 	private bool hitR = false;
 
 	//
-	private bool hitG2 = false;
-	private bool hitO = false;
-	private bool hitR2 = false;
+	private bool hitB = false;
 	private bool hitI2 = false;
-	private bool hitL = false;
-	private bool hitL2 = false;
-	private bool hitA2 = false;
+	private bool hitR2 = false;
+	private bool hitD = false;
 
 	//
 	public GameObject Player {
@@ -100,32 +97,20 @@ public class GameManager : MonoBehaviour {
 	}
 
 	//
-	public bool HitG2 {
-		get { return hitG2; }
-	}
-
-	public bool HitO {
-		get { return hitO; }
-	}
-
-	public bool HitR2 {
-		get { return hitR2; }
+	public bool HitB {
+		get { return hitB; }
 	}
 
 	public bool HitI2 {
 		get { return hitI2; }
 	}
 
-	public bool HitL {
-		get { return hitL; }
+	public bool HitR2 {
+		get { return hitR2; }
 	}
-
-	public bool HitL2 {
-		get { return hitL2; }
-	}
-
-	public bool HitA2 {
-		get { return hitA2; }
+		
+	public bool HitD {
+		get { return hitD; }
 	}
 
 	//
@@ -196,32 +181,20 @@ public class GameManager : MonoBehaviour {
 	}
 
 	//
-	public void G2isHit () {
-		hitG2 = true;
-	}
-
-	public void OisHit () {
-		hitO = true;
-	}
-
-	public void R2isHit () {
-		hitR2 = true;
+	public void BisHit () {
+		hitB = true;
 	}
 
 	public void I2isHit () {
 		hitI2 = true;
 	}
 
-	public void LisHit () {
-		hitL = true;
+	public void R2isHit () {
+		hitR2 = true;
 	}
 
-	public void L2isHit () {
-		hitL2 = true;
-	}
-
-	public void A2isHit () {
-		hitA2 = true;
+	public void DisHit () {
+		hitD = true;
 	}
 
 	//

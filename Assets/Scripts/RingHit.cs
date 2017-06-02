@@ -50,32 +50,20 @@ public class RingHit : MonoBehaviour {
 			GameManager.instance.RisHit ();
 		}
 
-		if (other.tag == "G2") {
-			GameManager.instance.G2isHit ();
-		}
-
-		if (other.tag == "O") {
-			GameManager.instance.OisHit ();
-		}
-
-		if (other.tag == "R2") {
-			GameManager.instance.R2isHit ();
+		if (other.tag == "B") {
+			GameManager.instance.BisHit ();
 		}
 
 		if (other.tag == "I2") {
 			GameManager.instance.I2isHit ();
 		}
 
-		if (other.tag == "L") {
-			GameManager.instance.LisHit ();
+		if (other.tag == "R2") {
+			GameManager.instance.R2isHit ();
 		}
 
-		if (other.tag == "L2") {
-			GameManager.instance.L2isHit ();
-		}
-
-		if (other.tag == "A2") {
-			GameManager.instance.A2isHit ();
+		if (other.tag == "D") {
+			GameManager.instance.DisHit ();
 		}
 	}
 }
