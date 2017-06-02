@@ -62,7 +62,7 @@ public class RingCat : MonoBehaviour {
 		}
 
 		if (GameManager.instance.HitC && GameManager.instance.HitA && GameManager.instance.HitT) {
-			// animate the cat and open the gate
+			// open the gate
 		}
 
 	}
