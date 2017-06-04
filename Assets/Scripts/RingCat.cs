@@ -50,7 +50,15 @@ public class RingCat : MonoBehaviour {
 			// disables the "sound fail" script
 			colliderA.GetComponent<SoundFail> ().enabled = false;
 
-			audio.PlayOneShot (soundFx1);
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+
+			if (number == 0f) {
+				audio.PlayOneShot (soundFx1);
+			} else {
+				audio.PlayOneShot (soundFx2);
+			}
+
 			cHit = true;
 		}
 
@@ -63,7 +71,15 @@ public class RingCat : MonoBehaviour {
 			// disables the "sound fail" script
 			colliderT.GetComponent<SoundFail> ().enabled = false;
 
-			audio.PlayOneShot (soundFx1);
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+
+			if (number == 0f) {
+				audio.PlayOneShot (soundFx1);
+			} else {
+				audio.PlayOneShot (soundFx2);
+			}
+
 			aHit = true;
 		}
 
@@ -71,7 +87,15 @@ public class RingCat : MonoBehaviour {
 			letterT.enabled = false;
 			colliderT.SetActive (false);
 
-			audio.PlayOneShot (soundFx1);
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+
+			if (number == 0f) {
+				audio.PlayOneShot (soundFx1);
+			} else {
+				audio.PlayOneShot (soundFx2);
+			}
+
 			tHit = true;
 		}
 

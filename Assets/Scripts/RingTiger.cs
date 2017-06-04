@@ -59,7 +59,15 @@ public class RingTiger : MonoBehaviour {
 			// disables the "sound fail" script
 			colliderI.GetComponent<SoundFail> ().enabled = false;
 
-			audio.PlayOneShot (soundFx1);
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+
+			if (number == 0f) {
+				audio.PlayOneShot (soundFx1);
+			} else {
+				audio.PlayOneShot (soundFx2);
+			}
+
 			t2Hit = true;
 		}
 
@@ -72,7 +80,15 @@ public class RingTiger : MonoBehaviour {
 			// disables the "sound fail" script
 			colliderG.GetComponent<SoundFail> ().enabled = false;
 
-			audio.PlayOneShot (soundFx1);
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+
+			if (number == 0f) {
+				audio.PlayOneShot (soundFx1);
+			} else {
+				audio.PlayOneShot (soundFx2);
+			}
+
 			iHit = true;
 		}
 
@@ -85,7 +101,15 @@ public class RingTiger : MonoBehaviour {
 			// disables the "sound fail" script
 			colliderE.GetComponent<SoundFail> ().enabled = false;
 
-			audio.PlayOneShot (soundFx1);
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+
+			if (number == 0f) {
+				audio.PlayOneShot (soundFx1);
+			} else {
+				audio.PlayOneShot (soundFx2);
+			}
+
 			gHit = true;
 		}
 
@@ -98,7 +122,15 @@ public class RingTiger : MonoBehaviour {
 			// disables the "sound fail" script
 			colliderR.GetComponent<SoundFail> ().enabled = false;
 
-			audio.PlayOneShot (soundFx1);
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+
+			if (number == 0f) {
+				audio.PlayOneShot (soundFx1);
+			} else {
+				audio.PlayOneShot (soundFx2);
+			}
+
 			eHit = true;
 		}
 
@@ -106,7 +138,15 @@ public class RingTiger : MonoBehaviour {
 			letterR.enabled = false;
 			colliderR.SetActive (false);
 
-			audio.PlayOneShot (soundFx1);
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+
+			if (number == 0f) {
+				audio.PlayOneShot (soundFx1);
+			} else {
+				audio.PlayOneShot (soundFx2);
+			}
+
 			rHit = true;
 		}
 

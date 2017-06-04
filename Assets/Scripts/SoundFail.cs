@@ -23,7 +23,14 @@ public class SoundFail : MonoBehaviour {
 	//
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Ball") {
-			audio.PlayOneShot (soundFxFail1);
+			
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+			if (number == 0f) {
+				audio.PlayOneShot (soundFxFail1);
+			} else {
+				audio.PlayOneShot (soundFxFail2);
+			}
 		}
 	}
 }

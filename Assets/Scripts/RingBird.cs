@@ -54,7 +54,15 @@ public class RingBird : MonoBehaviour {
 			// disables the "sound fail" script
 			colliderI2.GetComponent<SoundFail> ().enabled = false;
 
-			audio.PlayOneShot (soundFx1);
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+
+			if (number == 0f) {
+				audio.PlayOneShot (soundFx1);
+			} else {
+				audio.PlayOneShot (soundFx2);
+			}
+
 			bHit = true;
 		}
 
@@ -67,7 +75,15 @@ public class RingBird : MonoBehaviour {
 			// disables the "sound fail" script
 			colliderR2.GetComponent<SoundFail> ().enabled = false;
 
-			audio.PlayOneShot (soundFx1);
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+
+			if (number == 0f) {
+				audio.PlayOneShot (soundFx1);
+			} else {
+				audio.PlayOneShot (soundFx2);
+			}
+
 			i2Hit = true;
 		}
 
@@ -80,7 +96,15 @@ public class RingBird : MonoBehaviour {
 			// disables the "sound fail" script
 			colliderD.GetComponent<SoundFail> ().enabled = false;
 
-			audio.PlayOneShot (soundFx1);
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+
+			if (number == 0f) {
+				audio.PlayOneShot (soundFx1);
+			} else {
+				audio.PlayOneShot (soundFx2);
+			}
+
 			r2Hit = true;
 		}
 			
@@ -88,7 +112,15 @@ public class RingBird : MonoBehaviour {
 			letterD.enabled = false;
 			colliderD.SetActive (false);
 
-			audio.PlayOneShot (soundFx1);
+			// random number will determine which sound will play
+			float number = Mathf.Round (Random.Range (0f, 1f));
+
+			if (number == 0f) {
+				audio.PlayOneShot (soundFx1);
+			} else {
+				audio.PlayOneShot (soundFx2);
+			}
+
 			dHit = true;
 		}
 
