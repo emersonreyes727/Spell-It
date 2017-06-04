@@ -11,7 +11,8 @@ public class RingCat : MonoBehaviour {
 	[SerializeField] private Canvas letterT;
 	[SerializeField] private GameObject colliderT;
 
-	[SerializeField] private AudioClip soundFx;
+	[SerializeField] private AudioClip soundFx1;
+	[SerializeField] private AudioClip soundFx2;
 
 	private GvrAudioSource audio;
 
@@ -19,6 +20,18 @@ public class RingCat : MonoBehaviour {
 	private bool cHit = false;
 	private bool aHit = false;
 	private bool tHit = false;
+
+	//
+	void Awake () {
+		Assert.IsNotNull (letterC);
+		Assert.IsNotNull (colliderC);
+		Assert.IsNotNull (letterA);
+		Assert.IsNotNull (colliderA);
+		Assert.IsNotNull (letterT);
+		Assert.IsNotNull (colliderT);
+		Assert.IsNotNull (soundFx1);
+		Assert.IsNotNull (soundFx2);
+	}
 
 	//
 	void Start () {
@@ -38,7 +51,7 @@ public class RingCat : MonoBehaviour {
 			// turn on letter A when C is hit
 			colliderA.SetActive (true);
 
-			audio.PlayOneShot (soundFx);
+			audio.PlayOneShot (soundFx1);
 			cHit = true;
 		}
 
@@ -49,7 +62,7 @@ public class RingCat : MonoBehaviour {
 			// turn on letter T when A is hit
 			colliderT.SetActive (true);
 
-			audio.PlayOneShot (soundFx);
+			audio.PlayOneShot (soundFx1);
 			aHit = true;
 		}
 
@@ -57,7 +70,7 @@ public class RingCat : MonoBehaviour {
 			letterT.enabled = false;
 			colliderT.SetActive (false);
 
-			audio.PlayOneShot (soundFx);
+			audio.PlayOneShot (soundFx1);
 			tHit = true;
 		}
 

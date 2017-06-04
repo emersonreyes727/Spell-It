@@ -13,7 +13,8 @@ public class RingBird : MonoBehaviour {
 	[SerializeField] private Canvas letterD;
 	[SerializeField] private GameObject colliderD;
 
-	[SerializeField] private AudioClip soundFx;
+	[SerializeField] private AudioClip soundFx1;
+	[SerializeField] private AudioClip soundFx2;
 
 	private GvrAudioSource audio;
 
@@ -23,6 +24,19 @@ public class RingBird : MonoBehaviour {
 	private bool r2Hit = false;
 	private bool dHit = false;
 
+	// 
+	void Awake () {
+		Assert.IsNotNull (letterB);
+		Assert.IsNotNull (colliderB);
+		Assert.IsNotNull (letterI2);
+		Assert.IsNotNull (colliderI2);
+		Assert.IsNotNull (letterR2);
+		Assert.IsNotNull (colliderR2);
+		Assert.IsNotNull (letterD);
+		Assert.IsNotNull (colliderD);
+		Assert.IsNotNull (soundFx1);
+		Assert.IsNotNull (soundFx2);
+	}
 	//
 	void Start () {
 		// when game begins turn off collider 
@@ -41,7 +55,7 @@ public class RingBird : MonoBehaviour {
 
 			colliderI2.SetActive (true);
 
-			audio.PlayOneShot (soundFx);
+			audio.PlayOneShot (soundFx1);
 			bHit = true;
 		}
 
@@ -51,7 +65,7 @@ public class RingBird : MonoBehaviour {
 
 			colliderR2.SetActive (true);
 
-			audio.PlayOneShot (soundFx);
+			audio.PlayOneShot (soundFx1);
 			i2Hit = true;
 		}
 
@@ -61,7 +75,7 @@ public class RingBird : MonoBehaviour {
 
 			colliderD.SetActive (true);
 
-			audio.PlayOneShot (soundFx);
+			audio.PlayOneShot (soundFx1);
 			r2Hit = true;
 		}
 			
@@ -69,7 +83,7 @@ public class RingBird : MonoBehaviour {
 			letterD.enabled = false;
 			colliderD.SetActive (false);
 
-			audio.PlayOneShot (soundFx);
+			audio.PlayOneShot (soundFx1);
 			dHit = true;
 		}
 

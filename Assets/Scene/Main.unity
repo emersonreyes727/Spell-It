@@ -524,7 +524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8cd211dcd2c4f9fa95a9485a2d8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFxFail: {fileID: 8300000, guid: 8a43e17856c4d459f950f74769d6c06b, type: 3}
+  soundFxFail1: {fileID: 8300000, guid: 7b8293173f5d147c9ac46f1f99043ac2, type: 3}
+  soundFxFail2: {fileID: 8300000, guid: 8f4ff6182156941eda7a75b319926ed1, type: 3}
 --- !u!114 &42426592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,7 +768,7 @@ RectTransform:
   - {fileID: 1359845609}
   - {fileID: 635693631}
   m_Father: {fileID: 1435741451}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2074,166 +2075,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 214317365}
---- !u!1 &215086591
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 215086592}
-  - component: {fileID: 215086597}
-  - component: {fileID: 215086596}
-  - component: {fileID: 215086595}
-  - component: {fileID: 215086594}
-  - component: {fileID: 215086593}
-  m_Layer: 0
-  m_Name: Welcome Waypoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &215086592
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 215086591}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.7, y: 2.4, z: 4.6600037}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1435741451}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &215086593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 215086591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf227d116ce9045b690e630ca238b8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 1913419719}
---- !u!114 &215086594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 215086591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 183762909}
-          m_MethodName: OnMouseEnter
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 183762909}
-          m_MethodName: OnMouseExit
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 215086593}
-          m_MethodName: MoveHere
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
---- !u!23 &215086595
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 215086591}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!65 &215086596
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 215086591}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &215086597
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 215086591}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &221409770
 GameObject:
   m_ObjectHideFlags: 0
@@ -3213,7 +3054,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8cd211dcd2c4f9fa95a9485a2d8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFxFail: {fileID: 8300000, guid: 8a43e17856c4d459f950f74769d6c06b, type: 3}
+  soundFxFail1: {fileID: 8300000, guid: 7b8293173f5d147c9ac46f1f99043ac2, type: 3}
+  soundFxFail2: {fileID: 8300000, guid: 8f4ff6182156941eda7a75b319926ed1, type: 3}
 --- !u!114 &319380885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5605,7 +5447,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8cd211dcd2c4f9fa95a9485a2d8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFxFail: {fileID: 8300000, guid: 8a43e17856c4d459f950f74769d6c06b, type: 3}
+  soundFxFail1: {fileID: 8300000, guid: 7b8293173f5d147c9ac46f1f99043ac2, type: 3}
+  soundFxFail2: {fileID: 8300000, guid: 8f4ff6182156941eda7a75b319926ed1, type: 3}
 --- !u!114 &770950243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5958,7 +5801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8cd211dcd2c4f9fa95a9485a2d8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFxFail: {fileID: 8300000, guid: 8a43e17856c4d459f950f74769d6c06b, type: 3}
+  soundFxFail1: {fileID: 8300000, guid: 7b8293173f5d147c9ac46f1f99043ac2, type: 3}
+  soundFxFail2: {fileID: 8300000, guid: 8f4ff6182156941eda7a75b319926ed1, type: 3}
 --- !u!114 &798258338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6613,6 +6457,10 @@ Prefab:
     - target: {fileID: 482300, guid: 60270cf52a5e94998a5a335989159738, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 171526, guid: 60270cf52a5e94998a5a335989159738, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60270cf52a5e94998a5a335989159738, type: 2}
@@ -7527,7 +7375,8 @@ MonoBehaviour:
   colliderR2: {fileID: 1927584109}
   letterD: {fileID: 782225935}
   colliderD: {fileID: 1093849752}
-  soundFx: {fileID: 8300000, guid: 11ebe514d538e429b9426e0084717cc2, type: 3}
+  soundFx1: {fileID: 8300000, guid: 0078ade68cd11432a98b55fdd4c249b1, type: 3}
+  soundFx2: {fileID: 8300000, guid: 868711fe6536e49809a9e8a37a0a25c5, type: 3}
 --- !u!114 &1016591721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7695,7 +7544,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8cd211dcd2c4f9fa95a9485a2d8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFxFail: {fileID: 8300000, guid: 8a43e17856c4d459f950f74769d6c06b, type: 3}
+  soundFxFail1: {fileID: 8300000, guid: 7b8293173f5d147c9ac46f1f99043ac2, type: 3}
+  soundFxFail2: {fileID: 8300000, guid: 8f4ff6182156941eda7a75b319926ed1, type: 3}
 --- !u!114 &1034217886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7889,7 +7739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8cd211dcd2c4f9fa95a9485a2d8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFxFail: {fileID: 8300000, guid: 8a43e17856c4d459f950f74769d6c06b, type: 3}
+  soundFxFail1: {fileID: 8300000, guid: 7b8293173f5d147c9ac46f1f99043ac2, type: 3}
+  soundFxFail2: {fileID: 8300000, guid: 8f4ff6182156941eda7a75b319926ed1, type: 3}
 --- !u!1001 &1089457153
 Prefab:
   m_ObjectHideFlags: 0
@@ -8821,7 +8672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8cd211dcd2c4f9fa95a9485a2d8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFxFail: {fileID: 8300000, guid: 8a43e17856c4d459f950f74769d6c06b, type: 3}
+  soundFxFail1: {fileID: 8300000, guid: 7b8293173f5d147c9ac46f1f99043ac2, type: 3}
+  soundFxFail2: {fileID: 8300000, guid: 8f4ff6182156941eda7a75b319926ed1, type: 3}
 --- !u!114 &1220501006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10459,7 +10311,6 @@ Transform:
   - {fileID: 1817086180}
   - {fileID: 2110493074}
   - {fileID: 2109520439}
-  - {fileID: 215086592}
   - {fileID: 69639694}
   m_Father: {fileID: 735114318}
   m_RootOrder: 5
@@ -11276,7 +11127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8cd211dcd2c4f9fa95a9485a2d8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFxFail: {fileID: 8300000, guid: 8a43e17856c4d459f950f74769d6c06b, type: 3}
+  soundFxFail1: {fileID: 8300000, guid: 7b8293173f5d147c9ac46f1f99043ac2, type: 3}
+  soundFxFail2: {fileID: 8300000, guid: 8f4ff6182156941eda7a75b319926ed1, type: 3}
 --- !u!114 &1610449714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11798,7 +11650,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8cd211dcd2c4f9fa95a9485a2d8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFxFail: {fileID: 8300000, guid: 8a43e17856c4d459f950f74769d6c06b, type: 3}
+  soundFxFail1: {fileID: 8300000, guid: 7b8293173f5d147c9ac46f1f99043ac2, type: 3}
+  soundFxFail2: {fileID: 8300000, guid: 8f4ff6182156941eda7a75b319926ed1, type: 3}
 --- !u!23 &1724896362
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12784,7 +12637,8 @@ MonoBehaviour:
   colliderA: {fileID: 535541757}
   letterT: {fileID: 908965343}
   colliderT: {fileID: 2107761895}
-  soundFx: {fileID: 8300000, guid: 11ebe514d538e429b9426e0084717cc2, type: 3}
+  soundFx1: {fileID: 8300000, guid: 0078ade68cd11432a98b55fdd4c249b1, type: 3}
+  soundFx2: {fileID: 8300000, guid: 868711fe6536e49809a9e8a37a0a25c5, type: 3}
 --- !u!114 &1878910058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13070,7 +12924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8cd211dcd2c4f9fa95a9485a2d8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFxFail: {fileID: 8300000, guid: 8a43e17856c4d459f950f74769d6c06b, type: 3}
+  soundFxFail1: {fileID: 8300000, guid: 7b8293173f5d147c9ac46f1f99043ac2, type: 3}
+  soundFxFail2: {fileID: 8300000, guid: 8f4ff6182156941eda7a75b319926ed1, type: 3}
 --- !u!114 &1948947786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13431,19 +13286,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b90ff7e3d8926e44b8c08f957d58ecd0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000017798714
+      value: 0.000000017798715
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b90ff7e3d8926e44b8c08f957d58ecd0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.58033997
+      value: 0.58034
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b90ff7e3d8926e44b8c08f957d58ecd0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000012683746
+      value: -0.0000000126837465
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b90ff7e3d8926e44b8c08f957d58ecd0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.81437427
+      value: 0.8143743
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b90ff7e3d8926e44b8c08f957d58ecd0, type: 3}
       propertyPath: m_RootOrder
@@ -13671,7 +13526,8 @@ MonoBehaviour:
   colliderE: {fileID: 1456816663}
   letterR: {fileID: 580240669}
   colliderR: {fileID: 1917256856}
-  soundFx: {fileID: 8300000, guid: 11ebe514d538e429b9426e0084717cc2, type: 3}
+  soundFx1: {fileID: 8300000, guid: 0078ade68cd11432a98b55fdd4c249b1, type: 3}
+  soundFx2: {fileID: 8300000, guid: 868711fe6536e49809a9e8a37a0a25c5, type: 3}
 --- !u!114 &2024005176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14181,7 +14037,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8cd211dcd2c4f9fa95a9485a2d8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFxFail: {fileID: 8300000, guid: 8a43e17856c4d459f950f74769d6c06b, type: 3}
+  soundFxFail1: {fileID: 8300000, guid: 7b8293173f5d147c9ac46f1f99043ac2, type: 3}
+  soundFxFail2: {fileID: 8300000, guid: 8f4ff6182156941eda7a75b319926ed1, type: 3}
 --- !u!114 &2067658351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14751,7 +14608,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8cd211dcd2c4f9fa95a9485a2d8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFxFail: {fileID: 8300000, guid: 8a43e17856c4d459f950f74769d6c06b, type: 3}
+  soundFxFail1: {fileID: 8300000, guid: 7b8293173f5d147c9ac46f1f99043ac2, type: 3}
+  soundFxFail2: {fileID: 8300000, guid: 8f4ff6182156941eda7a75b319926ed1, type: 3}
 --- !u!114 &2101957751
 MonoBehaviour:
   m_ObjectHideFlags: 0

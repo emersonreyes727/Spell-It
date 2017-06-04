@@ -15,7 +15,8 @@ public class RingTiger : MonoBehaviour {
 	[SerializeField] private Canvas letterR;
 	[SerializeField] private GameObject colliderR;
 
-	[SerializeField] private AudioClip soundFx;
+	[SerializeField] private AudioClip soundFx1;
+	[SerializeField] private AudioClip soundFx2;
 
 	private GvrAudioSource audio;
 
@@ -26,6 +27,21 @@ public class RingTiger : MonoBehaviour {
 	private bool eHit = false;
 	private bool rHit = false;
 
+	//
+	void Awake () {
+		Assert.IsNotNull (letterT2);
+		Assert.IsNotNull (colliderT2);
+		Assert.IsNotNull (letterI);
+		Assert.IsNotNull (colliderI);
+		Assert.IsNotNull (letterG);
+		Assert.IsNotNull (colliderG);
+		Assert.IsNotNull (letterE);
+		Assert.IsNotNull (colliderE);
+		Assert.IsNotNull (letterR);
+		Assert.IsNotNull (colliderR);
+		Assert.IsNotNull (soundFx1);
+		Assert.IsNotNull (soundFx2);
+	}
 	//
 	void Start () {
 		// when game begins turn off collider for letters I, G, E, and R
@@ -46,7 +62,7 @@ public class RingTiger : MonoBehaviour {
 			// turn on letter I when T is hit
 			colliderI.SetActive (true);
 
-			audio.PlayOneShot (soundFx);
+			audio.PlayOneShot (soundFx1);
 			t2Hit = true;
 		}
 
@@ -57,7 +73,7 @@ public class RingTiger : MonoBehaviour {
 			// turn on letter G when I is hit
 			colliderG.SetActive (true);
 
-			audio.PlayOneShot (soundFx);
+			audio.PlayOneShot (soundFx1);
 			iHit = true;
 		}
 
@@ -68,7 +84,7 @@ public class RingTiger : MonoBehaviour {
 			// turn on letter E when G is hit
 			colliderE.SetActive (true);
 
-			audio.PlayOneShot (soundFx);
+			audio.PlayOneShot (soundFx1);
 			gHit = true;
 		}
 
@@ -79,7 +95,7 @@ public class RingTiger : MonoBehaviour {
 			// turn on letter R when E is hit
 			colliderR.SetActive (true);
 
-			audio.PlayOneShot (soundFx);
+			audio.PlayOneShot (soundFx1);
 			eHit = true;
 		}
 
@@ -87,7 +103,7 @@ public class RingTiger : MonoBehaviour {
 			letterR.enabled = false;
 			colliderR.SetActive (false);
 
-			audio.PlayOneShot (soundFx);
+			audio.PlayOneShot (soundFx1);
 			rHit = true;
 		}
 

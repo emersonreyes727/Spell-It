@@ -4,13 +4,15 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 public class SoundFail : MonoBehaviour {
-	[SerializeField] private AudioClip soundFxFail;
+	[SerializeField] private AudioClip soundFxFail1;
+	[SerializeField] private AudioClip soundFxFail2;
 
 	private GvrAudioSource audio;
 
 	//
 	void Awake () {
-		Assert.IsNotNull (soundFxFail);
+		Assert.IsNotNull (soundFxFail1);
+		Assert.IsNotNull (soundFxFail2);
 	}
 
 	// 
@@ -21,7 +23,7 @@ public class SoundFail : MonoBehaviour {
 	//
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Ball") {
-			audio.PlayOneShot (soundFxFail);
+			audio.PlayOneShot (soundFxFail1);
 		}
 	}
 }
