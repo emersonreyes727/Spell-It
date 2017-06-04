@@ -34,16 +34,12 @@ public class RingBird : MonoBehaviour {
 		Assert.IsNotNull (colliderR2);
 		Assert.IsNotNull (letterD);
 		Assert.IsNotNull (colliderD);
+
 		Assert.IsNotNull (soundFx1);
 		Assert.IsNotNull (soundFx2);
 	}
 	//
 	void Start () {
-		// when game begins turn off collider 
-		colliderI2.SetActive (false);
-		colliderR2.SetActive (false);
-		colliderD.SetActive (false);
-
 		audio = GetComponent<GvrAudioSource> ();
 	}
 
@@ -53,7 +49,10 @@ public class RingBird : MonoBehaviour {
 			letterB.enabled = false;
 			colliderB.SetActive (false);
 
-			colliderI2.SetActive (true);
+			// changes the tag
+			colliderI2.tag = "I2";
+			// disables the "sound fail" script
+			colliderI2.GetComponent<SoundFail> ().enabled = false;
 
 			audio.PlayOneShot (soundFx1);
 			bHit = true;
@@ -63,7 +62,10 @@ public class RingBird : MonoBehaviour {
 			letterI2.enabled = false;
 			colliderI2.SetActive (false);
 
-			colliderR2.SetActive (true);
+			// changes the tag
+			colliderR2.tag = "R2";
+			// disables the "sound fail" script
+			colliderR2.GetComponent<SoundFail> ().enabled = false;
 
 			audio.PlayOneShot (soundFx1);
 			i2Hit = true;
@@ -73,7 +75,10 @@ public class RingBird : MonoBehaviour {
 			letterR2.enabled = false;
 			colliderR2.SetActive (false);
 
-			colliderD.SetActive (true);
+			// changes the tag
+			colliderD.tag = "D";
+			// disables the "sound fail" script
+			colliderD.GetComponent<SoundFail> ().enabled = false;
 
 			audio.PlayOneShot (soundFx1);
 			r2Hit = true;

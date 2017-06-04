@@ -29,16 +29,13 @@ public class RingCat : MonoBehaviour {
 		Assert.IsNotNull (colliderA);
 		Assert.IsNotNull (letterT);
 		Assert.IsNotNull (colliderT);
+
 		Assert.IsNotNull (soundFx1);
 		Assert.IsNotNull (soundFx2);
 	}
 
 	//
 	void Start () {
-		// when game begins turn off collider for letters A and T
-		colliderA.SetActive (false);
-		colliderT.SetActive (false);
-
 		audio = GetComponent<GvrAudioSource> ();
 	}
 
@@ -48,8 +45,10 @@ public class RingCat : MonoBehaviour {
 			letterC.enabled = false;
 			colliderC.SetActive (false);
 
-			// turn on letter A when C is hit
-			colliderA.SetActive (true);
+			// changes the tag
+			colliderA.tag = "A";
+			// disables the "sound fail" script
+			colliderA.GetComponent<SoundFail> ().enabled = false;
 
 			audio.PlayOneShot (soundFx1);
 			cHit = true;
@@ -59,8 +58,10 @@ public class RingCat : MonoBehaviour {
 			letterA.enabled = false;
 			colliderA.SetActive (false);
 
-			// turn on letter T when A is hit
-			colliderT.SetActive (true);
+			// changes letter T's tag from X to T
+			colliderT.tag = "T";
+			// disables the "sound fail" script
+			colliderT.GetComponent<SoundFail> ().enabled = false;
 
 			audio.PlayOneShot (soundFx1);
 			aHit = true;

@@ -39,17 +39,12 @@ public class RingTiger : MonoBehaviour {
 		Assert.IsNotNull (colliderE);
 		Assert.IsNotNull (letterR);
 		Assert.IsNotNull (colliderR);
+
 		Assert.IsNotNull (soundFx1);
 		Assert.IsNotNull (soundFx2);
 	}
 	//
 	void Start () {
-		// when game begins turn off collider for letters I, G, E, and R
-		colliderI.SetActive (false);
-		colliderG.SetActive (false);
-		colliderE.SetActive (false);
-		colliderR.SetActive (false);
-
 		audio = GetComponent<GvrAudioSource> ();
 	}
 
@@ -59,8 +54,10 @@ public class RingTiger : MonoBehaviour {
 			letterT2.enabled = false;
 			colliderT2.SetActive (false);
 
-			// turn on letter I when T is hit
-			colliderI.SetActive (true);
+			// changes the tag
+			colliderI.tag = "I";
+			// disables the "sound fail" script
+			colliderI.GetComponent<SoundFail> ().enabled = false;
 
 			audio.PlayOneShot (soundFx1);
 			t2Hit = true;
@@ -70,8 +67,10 @@ public class RingTiger : MonoBehaviour {
 			letterI.enabled = false;
 			colliderI.SetActive (false);
 
-			// turn on letter G when I is hit
-			colliderG.SetActive (true);
+			// changes the tag
+			colliderG.tag = "G";
+			// disables the "sound fail" script
+			colliderG.GetComponent<SoundFail> ().enabled = false;
 
 			audio.PlayOneShot (soundFx1);
 			iHit = true;
@@ -81,8 +80,10 @@ public class RingTiger : MonoBehaviour {
 			letterG.enabled = false;
 			colliderG.SetActive (false);
 
-			// turn on letter E when G is hit
-			colliderE.SetActive (true);
+			// changes the tag
+			colliderE.tag = "E";
+			// disables the "sound fail" script
+			colliderE.GetComponent<SoundFail> ().enabled = false;
 
 			audio.PlayOneShot (soundFx1);
 			gHit = true;
@@ -92,8 +93,10 @@ public class RingTiger : MonoBehaviour {
 			letterE.enabled = false;
 			colliderE.SetActive (false);
 
-			// turn on letter R when E is hit
-			colliderR.SetActive (true);
+			// changes the tag
+			colliderR.tag = "R";
+			// disables the "sound fail" script
+			colliderR.GetComponent<SoundFail> ().enabled = false;
 
 			audio.PlayOneShot (soundFx1);
 			eHit = true;
