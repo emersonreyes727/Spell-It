@@ -15,6 +15,12 @@ public class RingTiger : MonoBehaviour {
 	[SerializeField] private Canvas letterR;
 	[SerializeField] private GameObject colliderR;
 
+	[SerializeField] private GameObject colliderA;
+	[SerializeField] private GameObject colliderU;
+	[SerializeField] private GameObject colliderH;
+	[SerializeField] private GameObject colliderS;
+	[SerializeField] private GameObject colliderK;
+
 	[SerializeField] private AudioClip soundFx1;
 	[SerializeField] private AudioClip soundFx2;
 
@@ -39,6 +45,12 @@ public class RingTiger : MonoBehaviour {
 		Assert.IsNotNull (colliderE);
 		Assert.IsNotNull (letterR);
 		Assert.IsNotNull (colliderR);
+
+		Assert.IsNotNull (colliderA);
+		Assert.IsNotNull (colliderU);
+		Assert.IsNotNull (colliderH);
+		Assert.IsNotNull (colliderS);
+		Assert.IsNotNull (colliderK);
 
 		Assert.IsNotNull (soundFx1);
 		Assert.IsNotNull (soundFx2);
@@ -152,7 +164,12 @@ public class RingTiger : MonoBehaviour {
 
 		if (GameManager.instance.HitT2 && GameManager.instance.HitI && GameManager.instance.HitG &&
 			GameManager.instance.HitE && GameManager.instance.HitR) {
-			// animate the tiger and open the gate
+			// disable colliders when player completes the section
+			colliderA.SetActive (false);
+			colliderU.SetActive (false);
+			colliderH.SetActive (false);
+			colliderS.SetActive (false);
+			colliderK.SetActive (false);
 		}
 	}
 }

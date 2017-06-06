@@ -11,6 +11,10 @@ public class RingCat : MonoBehaviour {
 	[SerializeField] private Canvas letterT;
 	[SerializeField] private GameObject colliderT;
 
+	[SerializeField] private GameObject colliderJ;
+	[SerializeField] private GameObject colliderF;
+	[SerializeField] private GameObject colliderO;
+
 	[SerializeField] private AudioClip soundFx1;
 	[SerializeField] private AudioClip soundFx2;
 
@@ -29,6 +33,10 @@ public class RingCat : MonoBehaviour {
 		Assert.IsNotNull (colliderA);
 		Assert.IsNotNull (letterT);
 		Assert.IsNotNull (colliderT);
+
+		Assert.IsNotNull (colliderJ);
+		Assert.IsNotNull (colliderF);
+		Assert.IsNotNull (colliderO);
 
 		Assert.IsNotNull (soundFx1);
 		Assert.IsNotNull (soundFx2);
@@ -100,7 +108,10 @@ public class RingCat : MonoBehaviour {
 		}
 
 		if (GameManager.instance.HitC && GameManager.instance.HitA && GameManager.instance.HitT) {
-			// open the gate
+			// disable colliders when player completes the section
+			colliderJ.SetActive (false);
+			colliderF.SetActive (false);
+			colliderO.SetActive (false);
 		}
 
 	}

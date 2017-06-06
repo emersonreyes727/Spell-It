@@ -13,6 +13,11 @@ public class RingBird : MonoBehaviour {
 	[SerializeField] private Canvas letterD;
 	[SerializeField] private GameObject colliderD;
 
+	[SerializeField] private GameObject colliderU;
+	[SerializeField] private GameObject colliderS;
+	[SerializeField] private GameObject colliderQ;
+	[SerializeField] private GameObject colliderC;
+
 	[SerializeField] private AudioClip soundFx1;
 	[SerializeField] private AudioClip soundFx2;
 
@@ -34,6 +39,11 @@ public class RingBird : MonoBehaviour {
 		Assert.IsNotNull (colliderR2);
 		Assert.IsNotNull (letterD);
 		Assert.IsNotNull (colliderD);
+
+		Assert.IsNotNull (colliderU);
+		Assert.IsNotNull (colliderS);
+		Assert.IsNotNull (colliderQ);
+		Assert.IsNotNull (colliderC);
 
 		Assert.IsNotNull (soundFx1);
 		Assert.IsNotNull (soundFx2);
@@ -126,7 +136,11 @@ public class RingBird : MonoBehaviour {
 
 		if (GameManager.instance.HitB && GameManager.instance.HitI2  && 
 			GameManager.instance.HitR2 && GameManager.instance.HitD) {
-			// open the gate
+			// disable colliders when player completes the section
+			colliderU.SetActive (false);
+			colliderS.SetActive (false);
+			colliderQ.SetActive (false);
+			colliderC.SetActive (false);
 		}
 	}
 }

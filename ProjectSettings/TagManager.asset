@@ -20,6 +20,9 @@ TagManager:
   - I2
   - B
   - D
+  - RemoveReticlePointer
+  - Ring
+  - TurnOnReticlePointer
   layers:
   - Default
   - TransparentFX
