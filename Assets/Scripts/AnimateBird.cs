@@ -6,6 +6,7 @@ public class AnimateBird : MonoBehaviour {
 	private Animator anim;
 	private GvrAudioSource audio;
 
+	// plays audio once
 	private bool runOnceBird = false;
 
 	// Use this for initialization

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaypointRotate : MonoBehaviour {
 	
-	// Update is called once per frame
+	// rotates the waypoints
 	void Update () {
 		transform.Rotate (new Vector3 (45, 0, 45) * Time.deltaTime);
 	}

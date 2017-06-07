@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour {
 	private bool gameOver = false;
 	private bool gameStart = false;
 
+	// 
+	private int ballCountCat = 0;
+	private int ballCountTiger = 0;
+	private int ballCountBird = 0;
+
 	//
 	private int hitX;
 	private int hitY;
@@ -47,6 +52,19 @@ public class GameManager : MonoBehaviour {
 
 	public bool GameStart {
 		get { return gameStart; }
+	}
+
+	//
+	public int BallCountCat {
+		get { return ballCountCat; }
+	}
+
+	public int BallCountTiger {
+		get { return ballCountTiger; }
+	}
+
+	public int BallCountBird {
+		get { return ballCountBird; }
 	}
 
 	//
@@ -131,6 +149,19 @@ public class GameManager : MonoBehaviour {
 
 	public void GameHasStarted () {
 		gameStart = true;
+	}
+
+	//
+	public void AddToCatCount (int total) {
+		ballCountCat = total;
+	}
+
+	public void AddToTigerCount (int total) {
+		ballCountTiger = total;
+	}
+
+	public void AddToBirdCount (int total) {
+		ballCountBird = total;
 	}
 
 	//

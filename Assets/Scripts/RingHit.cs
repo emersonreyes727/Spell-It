@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RingHit : MonoBehaviour {
 
+	// when ball hits the ring cube colliders
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "X") {
 			GameManager.instance.XisHit ();

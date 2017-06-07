@@ -6,6 +6,7 @@ public class AnimateTiger : MonoBehaviour {
 	private Animator anim;
 	private GvrAudioSource audio;
 
+	// plays audio once
 	private bool runOnceTiger = false;
 
 	// Use this for initialization

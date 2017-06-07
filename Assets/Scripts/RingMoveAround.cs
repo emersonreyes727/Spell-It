@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 public class RingMoveAround : MonoBehaviour {
+	// moves the bird rings around
 	[SerializeField] private GameObject ringB;
 	[SerializeField] private GameObject ringI2;
 	[SerializeField] private GameObject ringR2;

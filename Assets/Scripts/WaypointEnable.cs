@@ -54,6 +54,7 @@ public class WaypointEnable : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		// activates the waypoint when player spell the words correctly
 		if (GameManager.instance.GameStart) {
 			waypoint1.SetActive (true);	
 		} 
@@ -71,6 +72,7 @@ public class WaypointEnable : MonoBehaviour {
 			waypoint6.SetActive (true);
 		} 
 
+		// audio will play when player is in front of the rings
 		if (!GameManager.instance.HitC && !GameManager.instance.HitA && !GameManager.instance.HitT && (player.position.x == waypoint1.transform.position.x) && !playSpellCat) {
 			audio.PlayOneShot (soundFxCat);
 			playSpellCat = true;
