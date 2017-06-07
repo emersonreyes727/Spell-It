@@ -43,7 +43,6 @@ public class ShootBall : MonoBehaviour {
 	// 
 	void Start () {
 		audio = GetComponent<GvrAudioSource> ();
-		Debug.Log ("start: ballCountbird 0 " + GameManager.instance.BallCountBird);
 	}
 
 	// 
@@ -59,6 +58,18 @@ public class ShootBall : MonoBehaviour {
 			audio.PlayOneShot (soundFx);
 			isShooting = false;
 		}
+
+		if (GameManager.instance.HitC && GameManager.instance.HitA && GameManager.instance.HitT) {
+			GameManager.instance.AddToCatCount (catBallsShot);
+		}
+
+		if (GameManager.instance.HitT2 && GameManager.instance.HitI && GameManager.instance.HitG && GameManager.instance.HitE && GameManager.instance.HitR) {
+			GameManager.instance.AddToTigerCount (tigerBallsShot);
+		}
+
+		if (GameManager.instance.HitB && GameManager.instance.HitI2 && GameManager.instance.HitR2 && GameManager.instance.HitD) {
+			GameManager.instance.AddToBirdCount (birdBallsShot);
+		}
 	}
 
 	// add how many balls was shot
@@ -68,8 +79,6 @@ public class ShootBall : MonoBehaviour {
 			(player.position.x == waypoint1.position.x)) {
 
 			catBallsShot += 1;
-		} else if (GameManager.instance.HitC && GameManager.instance.HitA && GameManager.instance.HitT) {
-			GameManager.instance.AddToCatCount (catBallsShot);
 		}
 
 		// for tiger count
@@ -77,17 +86,13 @@ public class ShootBall : MonoBehaviour {
 			(player.position.x == waypoint3.position.x)) {
 
 			tigerBallsShot += 1;
-		} else if (GameManager.instance.HitT2 && GameManager.instance.HitI && GameManager.instance.HitG && GameManager.instance.HitE && GameManager.instance.HitR) {
-			GameManager.instance.AddToTigerCount (tigerBallsShot);
-		}
+		} 
 
 		// for bird count
 		if ((!GameManager.instance.HitB || !GameManager.instance.HitI2 || !GameManager.instance.HitR2 || !GameManager.instance.HitD) &&
 			(player.position.x == waypoint6.position.x)) {
 
 			birdBallsShot += 1;
-		} else if (GameManager.instance.HitB && GameManager.instance.HitI2 && GameManager.instance.HitR2 && GameManager.instance.HitD) {
-			GameManager.instance.AddToBirdCount (birdBallsShot);
 		}
 	}
 }

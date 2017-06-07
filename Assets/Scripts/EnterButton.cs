@@ -7,7 +7,7 @@ public class EnterButton : MonoBehaviour {
 	[SerializeField] private Transform player;
 	[SerializeField] private Transform firstWaypoint;
 	[SerializeField] private GameObject welcomeUI;
-	[SerializeField] private Canvas instructionsUI;
+	[SerializeField] private GameObject instructionsUI;
 
 	//
 	void Awake () {
@@ -19,12 +19,12 @@ public class EnterButton : MonoBehaviour {
 
 	public void ShowInstructions () {
 		welcomeUI.SetActive (false);
-		instructionsUI.enabled = true;
+		instructionsUI.SetActive (true);
 	}
 
 	public void EnterGame () {
 		player.position = firstWaypoint.position;
-		instructionsUI.enabled = false;
+		instructionsUI.SetActive (false);
 
 		GameManager.instance.GameHasStarted ();
 	}
